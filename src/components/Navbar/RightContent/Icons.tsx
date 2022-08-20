@@ -1,0 +1,95 @@
+import React from 'react';
+import { AddIcon } from '@chakra-ui/icons';
+import { Box, Flex, Icon } from '@chakra-ui/react';
+import { BsArrowUpRightCircle, BsChatDots } from 'react-icons/bs';
+import { GrAdd } from 'react-icons/gr';
+import {
+  IoFilterCircleOutline,
+  IoNotificationsOutline,
+  IoVideocamOutline,
+} from 'react-icons/io5';
+// import useDirectory from '../../../hooks/useDirectory';
+
+type ActionIconsProps = {};
+
+const ActionIcons: React.FC<ActionIconsProps> = () => {
+  //   const { toggleMenuOpen } = useDirectory();
+  const toggleMenuOpen = () => {};
+
+  return (
+    <Flex alignItems='center' flexGrow={1}>
+      <Box
+        display={{ base: 'none', md: 'flex' }}
+        alignItems='center'
+        borderRight='1px solid'
+        borderColor='gray.200'
+      >
+        <Flex
+          mr={1.5}
+          ml={1.5}
+          padding={1}
+          cursor='pointer'
+          borderRadius={4}
+          _hover={{ bg: 'gray.200' }}
+        >
+          <Icon color='black' as={BsArrowUpRightCircle} fontSize={20} />
+        </Flex>
+        <Flex
+          mr={1.5}
+          ml={1.5}
+          padding={1}
+          cursor='pointer'
+          borderRadius={4}
+          _hover={{ bg: 'gray.200' }}
+        >
+          <Icon color='black' as={IoFilterCircleOutline} fontSize={22} />
+        </Flex>
+        <Flex
+          mr={1.5}
+          ml={1.5}
+          padding={1}
+          cursor='pointer'
+          borderRadius={4}
+          _hover={{ bg: 'gray.200' }}
+        >
+          <Icon color='black' as={IoVideocamOutline} fontSize={22} />
+        </Flex>
+      </Box>
+      <>
+        <Flex
+          mr={1.5}
+          ml={1.5}
+          padding={1}
+          cursor='pointer'
+          borderRadius={4}
+          _hover={{ bg: 'gray.200' }}
+        >
+          <Icon color='black' as={BsChatDots} fontSize={20} />
+        </Flex>
+        <Flex
+          mr={1.5}
+          ml={1.5}
+          padding={1}
+          cursor='pointer'
+          borderRadius={4}
+          _hover={{ bg: 'gray.200' }}
+        >
+          <Icon color='black' as={IoNotificationsOutline} fontSize={20} />
+        </Flex>
+        <Flex
+          display={{ base: 'none', md: 'flex' }}
+          mr={3}
+          ml={1.5}
+          padding={1}
+          cursor='pointer'
+          borderRadius={4}
+          _hover={{ bg: 'gray.200' }}
+          onClick={toggleMenuOpen}
+        >
+          <Icon color='black' as={GrAdd} fontSize={20} />
+        </Flex>
+      </>
+    </Flex>
+  );
+};
+export default ActionIcons;
