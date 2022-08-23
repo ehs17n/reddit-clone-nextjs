@@ -93,7 +93,7 @@ const CreateCommunityModal: React.FC<CreateCommunityModalProps> = ({
         transaction.set(communityDocRef, {
           createdId: user?.uid,
           createdAt: serverTimestamp(),
-          numberOfmembers: 1,
+          numberOfMembers: 1,
           privacyType: communityType,
         });
         // Create community Snippet as user
