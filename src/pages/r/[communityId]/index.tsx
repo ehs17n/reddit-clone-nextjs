@@ -4,8 +4,11 @@ import { doc, getDoc } from 'firebase/firestore';
 import { firestore } from '../../../firebase/clientApp';
 import { Community } from '../../../atoms/communitiesAtom';
 import safeJsonStringify from 'safe-json-stringify';
-import Header from './Header';
+
 import PageContentLayout from '../../../components/Layout/PageContent';
+import Header from '../../../components/Community/Header';
+import CreatePostLink from '../../../components/Community/CreatePostLink';
+import Posts from '../../../components/Post/Posts';
 type CommunityPageProps = {
   communityData: Community;
 };
@@ -19,7 +22,9 @@ const CommunityPage: React.FC<CommunityPageProps> = ({ communityData }) => {
       <Header communityData={communityData} />
       <PageContentLayout>
         <>
-          <div>LHS</div>
+          {/* LHS */}
+          <CreatePostLink />
+          <Posts communityData={communityData}/>
         </>
         <>
           <div>RHS</div>

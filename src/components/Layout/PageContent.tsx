@@ -7,7 +7,7 @@ interface PageContentLayoutProps {
 }
 
 // Assumes array of two children are passed
-const PageContentLayout: React.FC<PageContentLayoutProps> = ({
+const PageContent: React.FC<PageContentLayoutProps> = ({
   children,
   maxWidth,
 }) => {
@@ -34,4 +34,4 @@ const PageContentLayout: React.FC<PageContentLayoutProps> = ({
   );
 };
 
-export default PageContentLayout;
+export default PageContent;
